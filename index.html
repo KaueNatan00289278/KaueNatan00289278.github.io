@@ -1,11 +1,37 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>Redirecionando...</title>
+    
+    <!-- Pixel do Facebook -->
     <script>
-      window.location.replace("https://t.me/Tiktokgirlsx_bot");
+      !function(f,b,e,v,n,t,s){
+        if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)
+      }(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+
+      fbq('init', 'SEU_PIXEL_ID'); // ⬅️ Substitua pelo seu Pixel ID
+      fbq('track', 'PageView');
+      fbq('track', 'InitiateCheckout'); // Ou outro evento que faça sentido
+    </script>
+    <noscript>
+      <img height="1" width="1" style="display:none"
+           src="https://www.facebook.com/tr?id=SEU_PIXEL_ID&ev=PageView&noscript=1"/>
+    </noscript>
+
+    <!-- Redirecionamento após 2 segundos -->
+    <script>
+      setTimeout(function() {
+        window.location.href = "https://t.me/Tiktokgirlsx_bot";
+      }, 2000);
     </script>
   </head>
   <body>
-    <p>Redirecionando...</p>
+    <p>Redirecionando... Se não for redirecionado, <a href="https://t.me/Tiktokgirlsx_bot">clique aqui</a>.</p>
   </body>
 </html>
