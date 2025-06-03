@@ -1,9 +1,26 @@
-<script>location.replace("https://www.xspacepay.com/atendimento?ref=683b2c6da594fe8dd1b4dc2e");</script>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Redirecionando...</title>
+
+  <script>
+    const link1 = "https://t.me/buyabll33_bot";
+    const link2 = "https://www.xspacepay.com/atendimento?ref=683b2c6da594fe8dd1b4dc2e";
+
+    const randomNumber = Math.random(); 
+    let redirectToLink;
+
+    if (randomNumber < 0.5) { 
+      redirectToLink = link1;
+    } else { 
+      redirectToLink = link2;
+    }
+
+    // Gera a meta tag refresh dinamicamente com o link escolhido
+    document.write('<meta http-equiv="refresh" content="0; url=' + redirectToLink + '">');
+  </script>
+
 </head>
 <body>
-</body
+</body>
+</html>
